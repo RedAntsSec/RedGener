@@ -147,13 +147,13 @@ def show_generated(passwords):
             file_addr = input("Enter the address of your file to save passwords in it: ")
             f = open(file_addr , "w")
             for i in ans_index:
-                print(i)
+                print(i , end="")
                 f.write(i)
             print("Good luck.")
             exit()
         else:
             for i in ans_index:
-                print(i)
+                print(i , end="")
             print("Good luck.")
             exit()
 def main():
