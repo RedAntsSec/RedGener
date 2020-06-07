@@ -96,7 +96,7 @@ def automatic1(words , char_yn , num_yn , characters):
                         ans_index.append(b + i + words[index] + i + b)
                         ans_index.append(b + i + words[index] + b + i)
                 if char_yn == 0 and num_yn == 1 :
-                        for n in range(100):
+                        for n in range(101):
                             n = str(n)
                             ans_index.append(words[index] + n)
                             ans_index.append(n + words[index])
@@ -127,34 +127,33 @@ def automatic1(words , char_yn , num_yn , characters):
              print("Passwords generated successfully.")
              break
 def show_generated(passwords):
-    print("Choose one of these for showing passwords: ")
-    print ("1. Save passwords in a file.")
-    print ("2. Show passwords here in terminal and save them in a file. ")
-    print ("3. Just show the passwords here in terminal.")
-    choose = int(input("1-3: "))
-    if choose > 3 or choose < 1 :
-        print("Wrong password !")
-        show_generated(passwords)
-    else :
+        print("Choose one of these for showing passwords: ")
+        print ("1. Save passwords in a file.")
+        print ("2. Show passwords here in terminal and save them in a file. ")
+        print ("3. Just show the passwords here in terminal.")
+        choose = int(input("1-3: "))
         if choose == 1:
             file_addr = input("Enter the address of your file to save passwords in it: ")
             f = open(file_addr , "w")
             for i in ans_index:
                 f.write(i)
-            print("Good luck.")
+            print("\n\033[91mGood luck.")
             exit()
-        if choose == 2:
+        elif choose == 2:
             file_addr = input("Enter the address of your file to save passwords in it: ")
             f = open(file_addr , "w")
             for i in ans_index:
                 print(i , end="")
                 f.write(i)
-            print("Good luck.")
+            print("\n\033[91mGood luck.")
             exit()
-        else:
+        elif choose == 3:
             for i in ans_index:
                 print(i , end="")
-            print("Good luck.")
+            print("\n\033[91mGood luck.")
+            exit()
+        else : 
+            print("\033[91mIncorrect option!")
             exit()
 def main():
     user_input()
