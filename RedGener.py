@@ -123,7 +123,7 @@ def automatic1(words , char_yn , num_yn , characters):
              for i in ans_index :
                  i = i + "\n"
                  ans_correct.append(i)
-                 ans_index = ans_correct
+             ans_index = ans_correct
              print("Passwords generated successfully.")
              break
 def show_generated(passwords):
